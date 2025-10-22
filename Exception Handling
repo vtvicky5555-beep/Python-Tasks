@@ -1,0 +1,26 @@
+try:
+    x=float(input("enter a number 1"))
+    y=float(input("enter number 2"))
+#choose operation
+    operation=input("choose operation (=,-,*,/):")
+    if operation =="+":
+        result= x+y
+    elif operation =="-":
+        result=x-y
+    elif operation =="*":
+        result=x*y
+    elif operation =="/":
+        result =x/y
+    else:
+        raise ValueError("Invalid operation")
+except ValueError as ve:
+    print("error",ve)
+except ZeroDivisionError:
+    print("error cannot dive by zero")
+except Exception as e:
+    print("unexpected error occured",e)
+else:
+    print("Result =",result)
+    print("calculation  successfully")
+finally:
+    print("thank for using safe calculator")
