@@ -1,0 +1,38 @@
+#find odd or even
+'''for i in range(1,11):
+    if i%2==0:
+        print(i,"Even Number")
+    else:
+        print(i,"Odd Number")
+
+#Using Loop Control Statement
+for i in range(1,6):
+    if i==3:
+        continue
+    else:
+        break
+    print(i)'''
+#count and find odd  even & positive negative  number
+total=0
+odd_count=0
+even_count=025
+for i in range(5):
+    num=int(input("Enter a number"))
+    #check the number is odd or even
+    if num%2==0:
+        print(num, "is Even Number")
+        even_count+=1
+    else:
+        print(num,"is odd NUmber")
+        odd_count+=1
+    #check positive or negative
+    if num>0:
+        print("is positive")
+    elif num<0:
+        print("is negative")
+    else:
+        print("Zero")
+    total+=num
+print("Total =",total)
+print("odd Count",odd_count)
+print("even Count",even_count)
