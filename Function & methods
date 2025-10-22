@@ -1,0 +1,16 @@
+from functools import reduce
+def process_number(nums):
+    #odd number
+    odd_number=list(filter(lambda x:x%2!=0,nums))
+    print("Odd Number",odd_number)
+    #square each odd number
+    square_odds=list(map(lambda x:x**2,nums))
+    print("Square of odds",square_odds)
+    #sum of square number
+    square_sum=reduce(lambda x,y:x+y,square_odds)
+    print("Sum of square numbers",square_sum)
+#get input from user
+numbers=list(map(int,input("Enter the number sepereted by space").split()))
+#call a function
+result=process_number(numbers)
+print("sum of square ",result)
