@@ -1,0 +1,21 @@
+#creat a list 
+student_names=["vignesh","vijay","gopal","ram","vijay"]
+#remove duplicate
+unique_names=set(student_names)
+print("Unique Names :",unique_names)
+#tuple for each student details
+student_info_tuple=[("vignesh",22,"chennai"),("ram",23,"covai"),("gopal",30,"madurai")]
+#create a dictionary for each student
+student_dict_list=[]
+for info in  student_info_tuple:
+     student_dict={"name":info[0],"age":info[1],"city":info[2]}
+     student_dict_list.append(student_dict)
+
+#print age of specific student
+for student in student_dict_list:
+     if student["name"]=="vignesh":
+        print("vignesh age ",student["age"])
+
+#loop though all student
+for student in student_dict_list:
+     print("studebt Name :",student["name"] ,"city: ",student["city"])
