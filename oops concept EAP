@@ -1,0 +1,52 @@
+#abstraction method
+from abc import ABC, abstractmethod
+
+def Smarthome(ABC):
+    @abstractmethod
+    def turnoff(self):
+        pass
+
+    def turnon(self):
+        pass
+
+class Light(Smarthome):
+    def __init__(self):
+        self.status="off"
+    def turnon(self):
+        self.status="on"
+        print("light is on")
+    def turnoff(self):
+        self.status="off"
+        print("light is off")
+    def grt_status(self):
+        return self.status
+class fan(Smarthome):
+    def __init__(self):
+        self.status="off"
+    def turnon(self):
+        self.status="on"
+        print("fan is on")
+    def turnoff(self):
+        self.status="off"
+        print("fan is off")
+    def grt_status(self):
+        return self.status
+class ac(Smarthome):
+    def __init__(self):
+        self.status="off"
+    def turnon(self):
+        self.status="on"
+        print("ac is on")
+    def turnoff(self):
+        self.status="off"
+        print("ac is off")
+    def grt_status(self):
+        return self.status
+    
+devices=[Light(),fan(),ac()]
+for device in devices:
+    device.turnon()
+
+print("--- Checking status ---")
+for device in devices:
+    print(type(device).__name__, ":", device.grt_status())
