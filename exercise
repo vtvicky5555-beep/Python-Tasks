@@ -1,0 +1,36 @@
+student_name="Akil"
+#marks subject wise
+subject1=55
+subject2=75
+subject3=85
+#total mark
+Total=subject1+subject2+subject3
+#Average mark
+Avg=Total//3
+#Check Pass or fail
+passed=(subject1 >=40) and(subject2 >=40)and(subject3>=40)
+#output
+print("Student Name :",student_name)
+print("Total Marks =",Total)
+print("Average=",Avg)
+print("status:","pass" if True else "fail")
+
+
+
+#Run time input
+student_name=str(input("Enter Student Name :"))
+#marks subject wise
+subject1=int(input("Enter Subject 1 Mark :"))
+subject2=int(input("Enter Subject 2 Mark :"))
+subject3=int(input("Enter Subject 3 Mark :"))
+#total mark
+Total=subject1+subject2+subject3
+#Average mark
+Avg=Total//3
+#Check Pass or fail
+passed=(subject1 >=40) and (subject2 >=40) and (subject3>=40)
+#output
+print("Student Name :",student_name)
+print("Total Marks =",Total)
+print("Average=",Avg)
+print("status:","pass" if passed else "fail")
