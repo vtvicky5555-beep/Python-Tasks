@@ -1,0 +1,18 @@
+sentence=str(input("enter a sentence :"))
+print(sentence.upper()) 
+print(sentence.lower())
+a=0
+for char in sentence:
+    a+=1
+print(a)
+#remove space
+print(sentence.strip())
+#check the start and end letter
+a=str(input("guess the first letter"))
+b=str(input("guess the last letter"))
+print(sentence.startswith(a))
+print(sentence.endswith(b))
+#reverse a string
+print(sentence[::-1])
+#check sentence contain alpha numaric
+print(sentence.isalnum())
