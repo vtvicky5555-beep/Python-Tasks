@@ -1,0 +1,50 @@
+#get 3 lines from user
+'''lines=[]
+for i in range(3):
+    text=input(f"Enter line{i+1}: ")
+    lines.append(text+"\n")
+#write to file
+with open("notes.txt","w") as f:
+    f.writelines(lines)
+ #read file
+with open("notes.txt","r") as f:
+    content=f.read()
+print("content in notes")
+print(content)
+'''
+'''
+#json file handling
+#create a dictionary
+import json
+user={"name":"vicky","age":21,"skils":["python","java","c"]}
+
+#write a json data to file
+with open("user.json","w") as f:
+    json.dump(user,f,indent=5)
+
+ #read a json file
+with open("user.json","r") as f:
+    data=json.load(f)
+print("data from json")
+print(data)
+print(f"Name{data['name']}")
+print(f"skills{','.join(data['skills'])}")
+'''
+#csv file
+import csv
+
+#create a student data
+student=[["Name","Age","Mark"],["vignesh",25,85],["kumar",34,74],["asha",34,98]]
+
+#write csv file
+with open("student.csv","w") as f:
+    write=csv.writer(f)
+    write.writerows(student)
+
+#read csv file
+print("Student name and Marks")
+with open("student.csv","r") as f:
+    reader=csv.reader(f)
+    next (reader)
+    for row in reader:
+        print(f"{row[0]}-{row[2]}")
